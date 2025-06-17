@@ -1,0 +1,48 @@
+header {
+  height: 72px;
+  width: 100%;
+  background: white;
+  padding: 0 8.72727272727vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border: 1px solid black;
+  img {
+    width: 170px;
+    height: 16px;
+    flex-shrink: 0;
+  }
+
+  nav {
+    display: flex;
+    gap: 37px;
+
+    a {
+      color: #000000;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: 2px;
+      text-decoration: none;
+    }
+  }
+
+  button {
+    width: 158px;
+    height: 40px;
+    flex-shrink: 0;
+    background: #000000;
+    border: none;
+
+    p {
+      color: #fff;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: 2px;
+    }
+  }
+}
