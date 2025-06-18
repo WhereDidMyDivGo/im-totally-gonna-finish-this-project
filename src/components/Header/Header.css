@@ -1,24 +1,25 @@
 header {
+  user-select: none;
+  position: relative;
   height: 72px;
   width: 100%;
   background: white;
-  padding: 0 8.72727272727vw;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 
-  border: 1px solid black;
   img {
     width: 170px;
     height: 16px;
     flex-shrink: 0;
   }
 
-  nav {
+  .main-nav {
     display: flex;
     gap: 37px;
 
     a {
+      transition: 0.3s;
       color: #000000;
       font-size: 12px;
       font-style: normal;
@@ -27,9 +28,15 @@ header {
       letter-spacing: 2px;
       text-decoration: none;
     }
+
+    a:hover {
+      opacity: 0.3;
+    }
   }
 
-  button {
+  .invite-button {
+    transition: 0.3s;
+    cursor: pointer;
     width: 158px;
     height: 40px;
     flex-shrink: 0;
@@ -37,6 +44,7 @@ header {
     border: none;
 
     p {
+      transition: 0.3s;
       color: #fff;
       font-size: 12px;
       font-style: normal;
@@ -45,4 +53,133 @@ header {
       letter-spacing: 2px;
     }
   }
+
+  .invite-button:hover {
+    background: #dfdfdf;
+
+    p {
+      color: #000000;
+    }
+  }
+
+  .menu-button,
+  .dropdown-nav {
+    display: none;
+  }
+}
+
+@media (max-width: 650px) {
+  header {
+    justify-content: space-between;
+    padding: 0 24px;
+    .main-nav,
+    .invite-button {
+      display: none;
+    }
+
+    .menu-button {
+      display: block;
+      cursor: pointer;
+      width: 20px;
+      height: 6px;
+    }
+
+    .dropdown-nav.show {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      width: 100%;
+      flex-shrink: 0;
+      padding: 32px;
+      background-color: white;
+      left: 0;
+      top: 72px;
+
+      a {
+        transition: 0.3s;
+        cursor: pointer;
+        color: #000;
+        text-align: center;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 2.5px;
+        text-transform: uppercase;
+        text-decoration: none;
+      }
+
+      a:hover {
+        opacity: 0.3;
+      }
+
+      span {
+        width: 100%;
+        height: 1px;
+        opacity: 0.25;
+        background: #000;
+      }
+
+      .invite-button-2 {
+        transition: 0.3s;
+        cursor: pointer;
+        width: 310px;
+        height: 48px;
+        flex-shrink: 0;
+        background: #000000;
+        border: none;
+
+        p {
+          transition: 0.3s;
+          color: #fff;
+          text-align: center;
+          font-size: 15px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          letter-spacing: 2.5px;
+        }
+      }
+
+      .invite-button-2:hover {
+        background: #dfdfdf;
+
+        p {
+          color: #000000;
+        }
+      }
+    }
+  }
+}
+
+@keyframes dropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes dropdownFadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+.dropdown-nav.fade-in {
+  animation: dropdownFadeIn 0.3s forwards;
+}
+
+.dropdown-nav.fade-out {
+  animation: dropdownFadeOut 0.3s forwards;
 }
