@@ -6,6 +6,7 @@ import Home from "./components/Home/Home.jsx";
 import Stories from "./components/Stories/Stories.jsx";
 import Features from "./components/Features/Features.jsx";
 import Pricing from "./components/Pricing/Pricing.jsx";
+import Footer from "./components/Footer/Footer.jsx";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/Pricing" element={<Pricing />} />
         <Route path="/Stories" element={<Stories />} />
       </Routes>
+      <Footer />
     </>
   );
 }
