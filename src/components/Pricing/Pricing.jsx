@@ -83,7 +83,65 @@ function Pricing() {
           </div>
         </div>
       </section>
-      <section className="s3"></section>
+      <section className="s3">
+        <h1>COMPARE</h1>
+        <div className="table">
+          <div className="row1 row">
+            <p>THE FEATURES</p>
+            <p>BASIC</p>
+            <p>PRO</p>
+            <p>BUSINESS</p>
+          </div>
+          <div className="row2 row">
+            <p>UNLIMITED STORY POSTING</p>
+            <p>✓</p>
+            <p>✓</p>
+            <p>✓</p>
+          </div>
+          <div className="row3 row">
+            <p>UNLIMITED PHOTO UPLOAD</p>
+            <p>✓</p>
+            <p>✓</p>
+            <p>✓</p>
+          </div>
+          <div className="row4 row">
+            <p>EMBEDDING CUSTOM CONTENT</p>
+            <p></p>
+            <p>✓</p>
+            <p>✓</p>
+          </div>
+          <div className="row5 row">
+            <p>CUSTOMIZE METADATA</p>
+            <p></p>
+            <p>✓</p>
+            <p>✓</p>
+          </div>
+          <div className="row6 row">
+            <p>ADVANCED METRICS</p>
+            <p></p>
+            <p></p>
+            <p>✓</p>
+          </div>
+          <div className="row7 row">
+            <p>PHOTO DOWNLOADS</p>
+            <p></p>
+            <p></p>
+            <p>✓</p>
+          </div>
+          <div className="row8 row">
+            <p>SEARCH ENGINE INDEXING</p>
+            <p></p>
+            <p></p>
+            <p>✓</p>
+          </div>
+          <div className="row9 row">
+            <p>CUSTOM ANALYTICS</p>
+            <p></p>
+            <p></p>
+            <p>✓</p>
+          </div>
+        </div>
+      </section>
 
       <Beta />
     </div>
