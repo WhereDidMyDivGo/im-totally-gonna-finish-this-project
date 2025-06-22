@@ -1,0 +1,25 @@
+.features {
+  width: 100%;
+
+  .s1,
+  .s2,
+  .s3,
+  .s4,
+  .s5 {
+    width: 100%;
+    display: flex;
+  }
+
+  .s2 {
+    padding: 160px 0;
+    align-items: center;
+    flex-direction: column;
+    gap: 104px;
+
+    .wrapper {
+      max-width: 1110px;
+      display: flex;
+      gap: 48px;
+    }
+  }
+}

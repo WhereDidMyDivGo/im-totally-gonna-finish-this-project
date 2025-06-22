@@ -1,16 +1,18 @@
 import "./TeaserBlock.css";
 import arrow from "../../assets/shared/desktop/arrow.svg";
 
-function TeaserBlock({ section }) {
+function TeaserBlock({ teaser }) {
   return (
-    <div className={`teaser-block ${section.theme}`}>
+    <div className={`teaser-block ${teaser.theme}`}>
       <div className="text">
-        <h1>{section.title}</h1>
-        <h2>{section.description}</h2>
-        <button>
-          <p>{section.buttonText}</p>
-          <img className="arrow" src={arrow} />
-        </button>
+        <h1>{teaser.title}</h1>
+        <h2>{teaser.description}</h2>
+        {teaser.buttonText && (
+          <button>
+            <p>{teaser.buttonText}</p>
+            <img className="arrow" src={arrow} />
+          </button>
+        )}
       </div>
     </div>
   );
