@@ -8,6 +8,7 @@ function StoryBlock({ story }) {
     <>
       <div className="story-block">
         <img src={story.img} className="bg-image" />
+        {story.date && <p className="date">{story.date}</p>}
         <h1>{story.title}</h1>
         <h2>{story.description}</h2>
         <span className="line"></span>

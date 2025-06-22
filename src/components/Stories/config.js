@@ -1,5 +1,5 @@
-import imgS2Story2 from "../../assets/stories/desktop/mountains.jpg";
-import imgS2Story1 from "../../assets/stories/desktop/cityscapes.jpg";
+import imgS2Story1 from "../../assets/stories/desktop/mountains.jpg";
+import imgS2Story2 from "../../assets/stories/desktop/cityscapes.jpg";
 import imgS2Story3 from "../../assets/stories/desktop/18-days-voyage.jpg";
 import imgS2Story4 from "../../assets/stories/desktop/architecturals.jpg";
 

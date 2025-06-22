@@ -3,10 +3,216 @@
 
   .s1,
   .s2,
-  .s3,
-  .s4,
-  .s5 {
+  .s3 {
     width: 100%;
     display: flex;
+  }
+
+  .s2 {
+    margin-top: 120px;
+    padding: 0 8.72727273vw;
+    display: flex;
+    align-items: center;
+
+    .wrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 48px;
+
+      .toggle {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+
+        p {
+          transition: 0.3s;
+          opacity: 0.5;
+          color: #000;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 25px;
+        }
+
+        p.selected-toggle {
+          opacity: 1;
+        }
+
+        .switch {
+          transition: 0.3s;
+          width: 64px;
+          height: 32px;
+          border-radius: 165px;
+          border: none;
+          cursor: pointer;
+          background: #dfdfdf;
+          padding: 4px;
+
+          .ball {
+            transform: translateX(0);
+            transition: 0.3s;
+            display: block;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: #000;
+          }
+        }
+
+        .switch.yearly {
+          background: #000;
+
+          .ball {
+            transform: translateX(32px);
+            background: #ffffff;
+          }
+        }
+      }
+
+      .plans {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+
+        .basic,
+        .pro,
+        .business {
+          flex: 1;
+          padding: 0 40px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          .title {
+            text-align: center;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 25px;
+          }
+
+          .description {
+            margin-top: 18px;
+            text-align: center;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 25px;
+          }
+
+          .cost {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 48px;
+            letter-spacing: 4.167px;
+            text-transform: uppercase;
+          }
+
+          .per {
+            text-align: center;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 25px;
+          }
+
+          button {
+            transition: 0.3s;
+            margin-top: 40px;
+            width: 270px;
+            height: 40px;
+            flex-shrink: 0;
+            border: none;
+            cursor: pointer;
+
+            p {
+              transition: 0.3s;
+              color: #fff;
+              text-align: center;
+              font-size: 12px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: normal;
+              letter-spacing: 2px;
+            }
+          }
+        }
+
+        .plan.light {
+          background: #f5f5f5;
+
+          h1,
+          p {
+            color: #000;
+          }
+
+          button {
+            background: #000;
+
+            p {
+              color: #fff;
+            }
+          }
+
+          button:hover {
+            background: #dfdfdf;
+
+            p {
+              color: #000;
+            }
+          }
+        }
+
+        .plan.dark {
+          background: #000;
+
+          h1,
+          p {
+            color: #fff;
+          }
+
+          button {
+            background: #fff;
+
+            p {
+              color: #000;
+            }
+          }
+
+          button:hover {
+            background: #dfdfdf;
+          }
+        }
+
+        .basic {
+          aspect-ratio: 350 / 407;
+        }
+
+        .pro {
+          position: relative;
+          aspect-ratio: 350 / 470;
+
+          .rainbow-line {
+            top: 0;
+            left: 0;
+            position: absolute;
+            width: 100%;
+            height: 6px;
+            flex-shrink: 0;
+            background: linear-gradient(27deg, #ffc593 0%, #bc7198 43.29%, #5a77ff 83.33%);
+          }
+        }
+
+        .business {
+          aspect-ratio: 350 / 407;
+        }
+      }
+    }
   }
 }

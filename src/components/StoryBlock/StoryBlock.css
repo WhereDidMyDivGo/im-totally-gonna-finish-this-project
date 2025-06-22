@@ -18,6 +18,14 @@
     left: 0;
   }
 
+  .date {
+    color: #fff;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
   h1 {
     color: #fff;
     font-size: 18px;
@@ -89,5 +97,20 @@
 
   .arrow {
     animation: arrow 2s infinite;
+  }
+}
+
+/* note done with responsive */
+
+@media (max-width: 1000px) {
+  .story-block {
+    width: 100%;
+    aspect-ratio: 360 / 500;
+  }
+}
+
+@media (max-width: 450px) {
+  .story-block {
+    aspect-ratio: 375 / 350;
   }
 }
