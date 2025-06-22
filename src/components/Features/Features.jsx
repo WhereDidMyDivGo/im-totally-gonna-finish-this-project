@@ -1,6 +1,7 @@
 import "./Features.css";
 import config from "./config";
 
+import Beta from "../Beta/Beta";
 import TeaserBlock from "../TeaserBlock/TeaserBlock";
 import FeatureBlock from "../FeatureBlock/FeatureBlock";
 
@@ -25,8 +26,8 @@ function Features() {
           <FeatureBlock feature={config.features.feature3} />
         </div>
       </section>
-      <section className="s3"></section>
-      <section className="s4"></section>
+
+      <Beta />
     </div>
   );
 }
