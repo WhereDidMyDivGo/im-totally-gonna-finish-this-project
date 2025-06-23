@@ -12,13 +12,19 @@ function Header() {
     const dropdownNav = document.querySelector(".dropdown-nav");
     const dropDownAnchor = document.querySelectorAll(".anchor");
 
+    let isAnimating = false;
+
     menuBtn.addEventListener("click", () => {
+      if (isAnimating) return;
+      isAnimating = true;
       menuBtnChange();
       toggleDropDown();
     });
 
     dropDownAnchor.forEach((anchor) => {
       anchor.addEventListener("click", () => {
+        if (isAnimating) return;
+        isAnimating = true;
         menuBtnChange();
         toggleDropDown();
       });
@@ -30,12 +36,14 @@ function Header() {
         setTimeout(() => {
           dropdownNav.classList.remove("show");
           dropdownNav.classList.remove("fade-out");
+          isAnimating = false;
         }, 300);
       } else {
         dropdownNav.classList.add("fade-in");
         dropdownNav.classList.add("show");
         setTimeout(() => {
           dropdownNav.classList.remove("fade-in");
+          isAnimating = false;
         }, 300);
       }
     }
